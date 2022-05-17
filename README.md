@@ -1,0 +1,2 @@
+# WinClose
+Local $aProcessList = ProcessList("lcore.exe") Local $aWinlist = Winlist() For $i = 1 To $aProcessList[0][0]     For $j = 1 To $aWinlist[0][0]         If WinGetProcess($aWinlist[$j][1]) = $aProcessList[$i][1] Then             ConsoleWrite("WinClose PID[" &amp; $aProcessList[$i][1] &amp; "] HWND[" &amp; $aWinlist[$j][1] &amp; "]: " &amp; WinClose($aWinlist[$j][1]) &amp; @CRLF)         EndIf     Next Next
